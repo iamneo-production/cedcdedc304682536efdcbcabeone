@@ -64,10 +64,15 @@ body{
 .cell.circle {
   cursor: not-allowed;
 }
-
-.board.x .cell:hover {
-
+.cell.x::before,
+.cell.cell.x::after {
+  background-color: black;
 }
+.board.x .cell:not(.x):not(circle)::before,
+.board.x .cell:not(.x):not(circle)::after {
+  background-color: lightgrey;
+}
+
 .cell.x ::before,
 .cell.x ::after,
 .board.x .cell:not(.x):not(circle)::before,
