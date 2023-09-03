@@ -10,3 +10,25 @@ body {
   }
   
 /* Enter your styling here */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+:root {
+  --cell-size:
+}
+body{
+  margin: 0;
+}
+.board {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 1px solid white;
+}
