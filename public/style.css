@@ -31,12 +31,13 @@ body{
   grid-template-columns: repeat(3, auto);
 }
 .cell {
-  width: 100px;
-  height: 100px;
+  width: var(--cell-size);
+  height: var(--cell-size);
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .cell:first-child,
 .cell:nth-child(2),
@@ -61,10 +62,14 @@ body{
 .cell.x ::before,
 .cell.x ::after {
   content: '';
+  position: absolute;
   width: calc(var(--mark-size) * .15);
   height: var(--mark-size);
   background-color: black;
 }
 .cell.x::before {
   transform: rotate(45deg);
+}
+.cell.x::after {
+  transform: rotate(-45deg);
 }
